@@ -1,0 +1,38 @@
+<!--pages/news/news.wxml-->
+<view class='news-container'>
+  <view class='mail' wx:if="{{item.hasRead}}" wx:for="{{news}}">
+    <scroll-view scroll-x="true" class='mail-scroll' scroll-with-animation="false">
+      <view class='main-body'  bindtap='readNews'  data-idx='{{index}}'>
+        <view>
+          <image src='http://5b0988e595225.cdn.sohucs.com/images/20180227/fc23d13f015f4b9198c2021021f834c8.jpeg' class='avator'></image>
+        </view>
+        <view class='news-content'>
+          <view class='new-details'>
+            <text class='title'>消息中心</text>
+            <text class='date'>{{index}}小时前</text>
+          </view>
+          <text class='matter'>{{index}}内容呢内容呢内容呢内容呢内容呢</text>
+        </view>
+        <image src='/images/close-message.png' mode='widthFix' class='icon-message'></image>
+      </view>
+      <view class='delete-btn' bindtap="deleteNews" data-deleteIdx='{{index}}' data-receiveStatus="{{item.hasReceive}}">删除</view>
+    </scroll-view>
+  </view>
+  <view class='popup-receive' wx:if="{{showReceive}}">
+  <view class='receive-img-con'>
+  <image src="/images/receive.png" mode='widthFix' class='receive-img'></image>
+  <text class='title'>消息标题</text>
+  <text class='reward'>奖品的描述奖品的描述奖品的描述</text>
+  <view class='click-receive' bindtap='clickReceive'></view>
+  <view class='close-reward' bindtap='closeReward'></view>
+  </view>
+  </view>
+  <view class='popup-warning' wx:if="{{showWarning}}">
+  <view class='warning-img-con'>
+  <image src="/images/warn.png" mode='widthFix' class='warning-img'></image>
+  <view class='close' bindtap='closeWaring'></view>
+  <view class='cancel' bindtap='closeWaring'></view>
+  <view class='delete-sure' bindtap='deleteSure'></view>
+  </view>
+  </view>
+</view>

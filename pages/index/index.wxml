@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class="container">
+  <navigator url="../member/member" class='membernav-btn'>会员说明</navigator>
+  <view class="userinfo">
+    <!-- <view class='top-container'> -->
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class='userinfo-view'>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" mode='scaleToFill'></image>
+      </view>
+      <view class='userinfo-view'>
+        <text class="userinfo-rank">您在贯日当前排名: {{userInfo.rank}}</text>
+      </view>
+      <view class='userinfo-view'>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+      <view class="fragment-points-con">
+        <text class="userinfo-fragment">碎片: {{userInfo.fragment}}</text>
+        <text class="userinfo-points">积分: {{userInfo.points}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- </view> -->
+    <view class="progress">
+      <view class="progress-bar progress-bar-danger progress-bar-striped active" style="width: {{percent}}">
+        <!-- <view class="progress-value">60%</view> -->
+      </view>
+      <view class='member-vip-cbox'>
+      <view class='member-vip-{{index+1}} member-vip' wx:for-items="{{members}}" wx:key="*this">
+      <image src='{{item.url}}' class='vip-icon' mode='widthFix'></image>
+      </view>
+      </view>
+    </view>
+  <!-- 首页导航s -->
+  <view class="dashboard">
+    <view class='dashboard-position'>
+      <view wx:for-items="{{navs}}" wx:key="*this" class='dashboard-container' bindtap='navigate' data-page="{{item.page}}">
+        <view class='nav-container'>
+          <image src='{{item.url}}' mode='aspectFit' class='nav-img'></image>
+          <text class='nav-explain'>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 首页导航e -->
+  <!-- 兑换礼品s -->
+  <view class='exchange-banner' bindtap='exchange'>
+    <image src="/images/exchange-banner.png" mode='widthFix' class='exchange-mg'></image>
+  </view>
+  <view class='exchange-content'>
+    <image src="/images/exchange-content.png" mode='widthFix' class='exchange-img'></image>
+    <view class='exchange-child-box'>
+      <view class='exchange-item' wx:for="{{rewards}}" wx:key="*this">
+        <image mode="scaleToFill" class='exchange-child-img' src="{{item.imgUrl}}"></image>
+        <text class='exchange-child-explain' bindtap='goToDetails' id='{{item.id}}' data-integral='{{item.ig_goods_integral}}'></text>
+      </view>
+    </view>
+  </view>
+  <!-- 兑换礼品e -->
+  <!-- 首页底部s -->
+  <view class='footer'>
+    <image mode='widthFix' src='/images/footer-banner.png' class='footer-bg'></image>
+  </view>
+  <!-- 首页底部e -->
+  <!-- 左右侧悬浮 -->
+  <view class='slide1-decoration'>
+    <image src="/images/decoration1.png" mode='widthFix' class='slide2-img'></image>
+  </view>
+  <view class='slide2-decoration'>
+    <image src="/images/decoration2.png" mode='widthFix' class='slide2-img'></image>
+  </view>
+  <!-- 自定义弹窗  -->
+  <view class='toast'>
+    <toast wx:if="{{errorToast.show}}" error="{{errorToast}}" bindhide="hideToast"></toast>
+  </view>
+</view>

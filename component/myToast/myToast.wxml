@@ -1,0 +1,11 @@
+<!--component/myToast/myToast.wxml-->
+<view class='toast-container'>
+<view class='toast-box' wx:if="{{error.show}}">
+<view class='toast-content'>
+<image src="/images/error-icon.png" class='toast-content-icon' mode='widthFix'></image>
+<text class='toast-content-text'>
+{{error.title}}
+</text>
+</view>
+</view>
+</view>

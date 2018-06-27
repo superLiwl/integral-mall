@@ -1,0 +1,298 @@
+/**index.wxss**/
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #79000d;
+}
+
+.membernav-btn{
+  position: absolute;
+  top: 62.5rpx;
+  right: 41.5rpx;
+  padding: 10.28rpx 20.41rpx;
+  font-size: 22.41rpx;
+  border-radius: 14rpx;
+  background:linear-gradient(to left, #f2bf5b, #f8d48c, #f2bf5b);
+  color: #4e2401;
+}
+/* userinfo s */
+
+.userinfo {
+  width: 100%;
+  background: url('http://36.7.138.114:124/app/2016/dist/images/top-banner.png') no-repeat;
+  background-size: 100% 415rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-top: 96rpx;
+  margin-left: -10rpx;
+  border-radius: 50%;
+}
+
+.userinfo-rank {
+  font-size: 22rpx;
+  color: #f3ca6c;
+}
+
+.userinfo-nickname {
+  margin: 10rpx 0;
+  font-size: 38rpx;
+  color: #f3ca6c;
+}
+
+.userinfo-fragment, .userinfo-points {
+  font-size: 22rpx;
+  color: #f3ca6c;
+}
+
+.userinfo-fragment {
+  margin-right: 18px;
+}
+
+.userinfo-view {
+  text-align: center;
+}
+
+.fragment-points-con {
+  display: flex;
+  justify-content: center;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.top-banner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* e */
+
+/* 导航dashboard s*/
+
+.dashboard {
+  width: 613rpx;
+  height: 390rpx;
+}
+
+.dashboard-position {
+  position: absolute;
+  width: 613rpx;
+   top: 25.5%; 
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dashboard-container {
+  width: 21%;
+  height: 200rpx;
+  margin: 0 2%;
+  float: left;
+}
+
+.nav-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-explain {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #f3ca6c;
+}
+
+/* 导航dashboard e*/
+
+/* 兑换css s*/
+
+.exchange-banner {
+  width: 610rpx;
+  margin-top: 10rpx;
+}
+
+.exchange-mg {
+  width: 100%;
+}
+
+.exchange-content {
+  position: relative;
+  width: 720rpx;
+  height: 300rpx;
+}
+
+.exchange-img {
+  width: 100%;
+}
+
+.exchange-child-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.exchange-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  margin-left: 25.5rpx;
+  margin-left: 3.5%;
+  float: left;
+}
+
+.exchange-child-img {
+ width:95%;
+height:90rpx;
+margin-left:14.5rpx;
+margin-bottom:22rpx;
+
+}
+
+.exchange-child-explain {
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 22rpx;
+  margin-bottom: 52rpx;
+}
+
+/* 兑换css e*/
+
+/* 底部s */
+
+.footer {
+  width: 100%;
+}
+
+.footer-bg {
+  width: 100%;
+}
+
+/* 底部e */
+
+/* 悬浮装饰 */
+
+.slide1-decoration {
+  position: fixed;
+  top: 45%;
+  left: 0;
+  width: 130rpx;
+}
+
+.slide1-img {
+  width: 100%;
+}
+
+.slide2-decoration {
+  position: fixed;
+  top: 39%;
+  right: 0;
+  width: 130rpx;
+  z-index: 1;
+}
+
+.slide2-img {
+  width: 100%;
+}
+
+/* 新增会员css */
+.progress {
+  position: relative;
+  width: 456rpx;
+  height: 16rpx;
+  margin: 15rpx auto 20rpx;
+  background: #d7d6d6;
+  overflow: visible;
+  border-radius: 40rpx;
+}
+
+.progress .progress-bar {
+  height: 17rpx;
+  border-radius: 40rpx;
+  position: relative;
+  animation: animate-positive 2s;
+}
+
+.progress-bar.active {
+  animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+
+.progress-bar-danger {
+  background-color: #ffc100;
+}
+.progress-bar.active {
+  animation: reverse progress-bar-stripes 0.40s linear infinite, animate-positive 2s;
+}
+
+.progress-bar-danger {
+  background-color: #ffc100;
+}
+
+.progress-striped .progress-bar, .progress-bar-striped {
+  background-image: -webkit-linear-gradient(135deg, #ffde00 25%, transparent 25%, transparent 50%, #ffde00 50%, #ffde00 75%, transparent 75%, transparent);
+  /* background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); */
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+
+
+.member-vip{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  top: -20rpx;
+}
+
+.member-vip-1{
+  left: -5%;
+}
+.member-vip-2{
+  left: 28.3%
+}
+.member-vip-3{
+  left: 61.6%
+}
+.member-vip-4{
+  left: 94%
+}
+.vip-icon{
+  width: 100%;
+}

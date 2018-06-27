@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "lottery": "/component/lotteryMachine/lotteryMachine",
+    "toast": "/component/myToast/myToast"
+  }
+}

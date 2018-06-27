@@ -1,0 +1,34 @@
+/* component/myToast/myToast.wxss */
+
+.toast-container {
+  position: fixed;
+  width: 256rpx;
+  height: 184rpx;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toast-box {
+  padding: 20rpx;
+  border-radius: 10rpx;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-content-icon {
+  width: 80rpx;
+}
+
+.toast-content-text {
+  text-align: center;
+  font-size: 24rpx;
+  color: #f44336;
+}

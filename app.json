@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+	  "pages/upload/upload",    
+    "pages/sign2/sign2",
+    "pages/awards-record/awards-record",
+    "pages/turntable/turntable",
+    "pages/member/member",
+    "pages/honor/honor",
+    "pages/record/record",
+    "pages/sign/sign",
+    "pages/login/login",
+    "pages/mall/mall",
+    "pages/news/news",
+    "pages/logs/logs",
+    "pages/goods-details/goods-details",
+    "pages/backpack/backpack",
+    "pages/umamall/umamall"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "贯日积分",
+    "navigationBarTextStyle": "black"
+  }
+}
