@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-	  "pages/upload/upload",    
+    "pages/pay/pay",
+    "pages/upload/upload",
     "pages/sign2/sign2",
     "pages/awards-record/awards-record",
     "pages/turntable/turntable",

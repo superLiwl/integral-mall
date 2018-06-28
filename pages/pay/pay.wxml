@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="head">
+		<view class="left_con">实付款</view>
+		<view class="right_con">¥<view class="money">89.9</view></view>
+	</view>
+ 	<view class="pay_con">
+		<view class="wx_pay">
+			<view class="ico"><image src="/images/wechat_ico.png"></image></view>
+			<view class="pay_text">微信支付</view>
+			<view class="check_img" bindtap="check1"><image src="{{check1}}"></image></view>
+		</view>
+		<view class="wx_balance">
+			<view class="ico"><image src="/images/wx_pay_ico.png"></image></view>
+			<view class="pay_text">钱包余额</view>
+			<view class="check_img" bindtap="check2"><image src="{{check2}}"></image></view>
+  		</view>
+  	</view>
+  	<view class="foot">
+		<button class="pay_button">立即支付</button>
+  	</view>
+</view>
+ 
