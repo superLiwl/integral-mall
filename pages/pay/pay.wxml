@@ -17,7 +17,7 @@
   		</view>
   	</view>
   	<view class="foot">
-		<button class="pay_button">立即支付</button>
+		<button bindtap="toPayMoney" class="pay_button">立即支付</button>
   	</view>
 </view>
  

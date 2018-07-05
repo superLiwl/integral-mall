@@ -24,6 +24,11 @@ App({
     });
   },
   globalData: {
-    userInfo: null
+    userInfo: {
+      points:"",
+      rank: "",
+      fragment: "",
+      userId: ""
+    }
   }
 })

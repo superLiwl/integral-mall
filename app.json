@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/pay/pay",
+    "pages/umamall/goods/goods-info",
     "pages/upload/upload",
     "pages/sign2/sign2",
     "pages/awards-record/awards-record",

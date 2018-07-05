@@ -24,31 +24,13 @@ Page({
     },]
   },
   onLoad: function () {
-    //判断用户是否授权，并且获取用户信息
-    var that = this;
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          that.loginByCode();
-        } else {
-          wx.authorize({
-            scope: 'scope.userInfo',
-            success() {
-              that.loginByCode();
-            }
-          })
-        }
-      }
-    });
+    this.loginByCode();
   },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if(app.globalData.userInfo) {
-      this.getUserRank(app.globalData.userInfo.userId);
-      this.getUserIntegralAndFragment(app.globalData.userInfo.userId);
-    }
+  
   },
   // 查询用户排名信息--用来刷新页面
   getUserRank: function (userId) {
@@ -203,18 +185,6 @@ Page({
       }
     })
   },
-  getWxUserInfo: function () {
-    if (app.globalData.userInfo) {
-      return;
-    }
-    var that = this;
-    // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo
-      }
-    })
-  },
   loginSetUserInfo: function (data) {
     app.globalData.userInfo.points = data.datas.integral
     app.globalData.userInfo.rank = data.datas.rank
@@ -235,8 +205,6 @@ Page({
     this.getUserLevel();
   },
   loginByCode: function () {
-    //获取微信的用户信息
-    this.getWxUserInfo();
     var that = this;
     // 登录
     wx.showLoading({

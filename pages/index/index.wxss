@@ -31,9 +31,13 @@
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
-  margin-top: 96rpx;
+  margin-top: 97rpx;
   margin-left: -10rpx;
   border-radius: 50%;
+  padding-left:42.7%;
+  align-items: center; 
+  justify-content: center;
+  display: flex;
 }
 
 .userinfo-rank {
