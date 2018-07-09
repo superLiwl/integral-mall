@@ -2,7 +2,7 @@
 <view class="container">
 	<view class="head">
 		<view class="left_con">实付款</view>
-		<view class="right_con">¥<view class="money">89.9</view></view>
+		<view class="right_con">¥<view class="money">{{price}}</view></view>
 	</view>
  	<view class="pay_con">
 		<view class="wx_pay">

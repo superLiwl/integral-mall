@@ -6,6 +6,8 @@ Page({
   data: {
     check1: "/images/check_true.png",
     check2: "/images/check_false.png",
+    orderId: "",
+    price: ""
   },
   check1: function (event) {
     this.setData({
@@ -23,6 +25,11 @@ Page({
     var that = this;
     wx.request({
       url: api.url + '/ezShop/services/pay/getPayment',
+      data: {
+        'money': that.data.price,
+        'out_trade_no': that.data.orderId,
+        'userId': app.globalData.userInfo.userId
+      },
       method: 'GET',
       header: {
         'content-type': 'application/json'
@@ -51,22 +58,32 @@ Page({
         });
       }
     });
-
-    wx.requestPayment({
-      'timeStamp': that.data.timeStamp,
-      'nonceStr': that.data.nonceStr,
-      'package': that.data.packageP,
-      'signType': that.data.signType,
-      'paySign': that.data.sign,
-      'success': function (res) {
-        console.log("success：" + res);
-      },
-      'fail': function (res) {
-        console.log("fail：" + res);
-      },
-      'complete': function (res) {
-        console.log("complete：" + res);
-      }
-    })
   },
+  /**
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+    var that = this;
+    wx.request({
+      url: api.umaApi + '/WxCart/getOrderIdByIdAndSign.do',
+      method: 'GET',
+      data: {
+        'id': options.id,
+        'sign': options.sign
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          orderId: res.data.datas.orderId,
+          price: res.data.datas.price,
+        })
+      }
+    });
+
+
+    
+  }
 })
